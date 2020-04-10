@@ -38,6 +38,25 @@ endef
 define Package/lua-cqueues/install
     $(INSTALL_DIR) $(1)/usr/lib/lua
     $(CP) $(PKG_BUILD_DIR)/src/5.1/cqueues.so $(1)/lib/lua/_cqueues.so
+    $(INSTALL_DIR) $(1)/usr/share/lua/5.1/
+    $(INSTALL_DIR) $(1)/usr/share/lua/5.1/cqueues
+    $(INSTALL_DIR) $(1)/usr/share/lua/5.1/cqueues/dns
+    $(CP) $(PKG_BUILD_DIR)/src/cqueues.lua $(1)/share/lua/5.1/cqueues.lua
+    $(CP) $(PKG_BUILD_DIR)/src/socket.lua $(1)/share/lua/5.1/cqueues/socket.lua
+    $(CP) $(PKG_BUILD_DIR)/src/errno.lua $(1)/share/lua/5.1/cqueues/errno.lua
+    $(CP) $(PKG_BUILD_DIR)/src/signal.lua $(1)/share/lua/5.1/cqueues/errno.lua
+    $(CP) $(PKG_BUILD_DIR)/src/thread.lua $(1)/share/lua/5.1/cqueues/thread.lua
+    $(CP) $(PKG_BUILD_DIR)/src/condition.lua $(1)/share/lua/5.1/cqueues/condition.lua
+    $(CP) $(PKG_BUILD_DIR)/src/promise.lua $(1)/share/lua/5.1/cqueues/promise.lua
+    $(CP) $(PKG_BUILD_DIR)/src/auxlib.lua $(1)/share/lua/5.1/cqueues/auxlib.lua
+    $(CP) $(PKG_BUILD_DIR)/src/dns.lua $(1)/share/lua/5.1/cqueues/dns.lua
+    $(CP) $(PKG_BUILD_DIR)/src/dns.resolver.lua $(1)/share/lua/5.1/cqueues/dns/resolver.lua
+    $(CP) $(PKG_BUILD_DIR)/src/dns.config.lua $(1)/share/lua/5.1/cqueues/dns/config.lua
+    $(CP) $(PKG_BUILD_DIR)/src/dns.hosts.lua $(1)/share/lua/5.1/cqueues/dns/hosts.lua
+    $(CP) $(PKG_BUILD_DIR)/src/dns.hints.lua $(1)/share/lua/5.1/cqueues/dns/hints.lua
+    $(CP) $(PKG_BUILD_DIR)/src/dns.record.lua $(1)/share/lua/5.1/cqueues/dns/record.lua
+    $(CP) $(PKG_BUILD_DIR)/src/dns.packet.lua $(1)/share/lua/5.1/cqueues/dns/packet.lua
+    $(CP) $(PKG_BUILD_DIR)/src/dns.resolvers.lua $(1)/share/lua/5.1/cqueues/dns/resolvers.lua
 endef
 
 define Host/Compile
@@ -46,6 +65,25 @@ endef
 define Host/Install
     $(INSTALL_DIR) $(1)/lib/lua/5.1
     $(CP) $(HOST_BUILD_DIR)/src/5.1/cqueues.so $(1)/lib/lua/5.1/_cqueues.so
+    $(INSTALL_DIR) $(1)/usr/share/lua/5.1/
+    $(INSTALL_DIR) $(1)/usr/share/lua/5.1/cqueues
+    $(INSTALL_DIR) $(1)/usr/share/lua/5.1/cqueues/dns
+    $(CP) $(PKG_BUILD_DIR)/src/cqueues.lua $(1)/share/lua/5.1/cqueues.lua
+    $(CP) $(PKG_BUILD_DIR)/src/socket.lua $(1)/share/lua/5.1/cqueues/socket.lua
+    $(CP) $(PKG_BUILD_DIR)/src/errno.lua $(1)/share/lua/5.1/cqueues/errno.lua
+    $(CP) $(PKG_BUILD_DIR)/src/signal.lua $(1)/share/lua/5.1/cqueues/errno.lua
+    $(CP) $(PKG_BUILD_DIR)/src/thread.lua $(1)/share/lua/5.1/cqueues/thread.lua
+    $(CP) $(PKG_BUILD_DIR)/src/condition.lua $(1)/share/lua/5.1/cqueues/condition.lua
+    $(CP) $(PKG_BUILD_DIR)/src/promise.lua $(1)/share/lua/5.1/cqueues/promise.lua
+    $(CP) $(PKG_BUILD_DIR)/src/auxlib.lua $(1)/share/lua/5.1/cqueues/auxlib.lua
+    $(CP) $(PKG_BUILD_DIR)/src/dns.lua $(1)/share/lua/5.1/cqueues/dns.lua
+    $(CP) $(PKG_BUILD_DIR)/src/dns.resolver.lua $(1)/share/lua/5.1/cqueues/dns/resolver.lua
+    $(CP) $(PKG_BUILD_DIR)/src/dns.config.lua $(1)/share/lua/5.1/cqueues/dns/config.lua
+    $(CP) $(PKG_BUILD_DIR)/src/dns.hosts.lua $(1)/share/lua/5.1/cqueues/dns/hosts.lua
+    $(CP) $(PKG_BUILD_DIR)/src/dns.hints.lua $(1)/share/lua/5.1/cqueues/dns/hints.lua
+    $(CP) $(PKG_BUILD_DIR)/src/dns.record.lua $(1)/share/lua/5.1/cqueues/dns/record.lua
+    $(CP) $(PKG_BUILD_DIR)/src/dns.packet.lua $(1)/share/lua/5.1/cqueues/dns/packet.lua
+    $(CP) $(PKG_BUILD_DIR)/src/dns.resolvers.lua $(1)/share/lua/5.1/cqueues/dns/resolvers.lua
 endef
 
 $(eval $(call HostBuild))
