@@ -8,7 +8,7 @@ PKG_MAINTAINER:=Pavel Stano <pavel.stano@websupport.sk>
 PKG_LICENSE:=MIT
 PKG_LICENSE_FILES:=COPYRIGHT
 
-PKG_SOURCE_URL:=https://github.com/wahern/lua-cqueues.git
+PKG_SOURCE_URL:=https://github.com/wahern/cqueues.git
 PKG_SOURCE_VERSION:=813664c99c393acbcb007023b195b241a6b90a20
 PKG_SOURCE_PROTO:=git
 PKG_MIRROR_HASH:=24f1aa69b539e6796445c2228f921744ad64f9336498c7537bee97719d914804
@@ -23,7 +23,7 @@ define Package/lua-cqueues
   SECTION:=lang
   CATEGORY:=Languages
   TITLE:=lua-cqueues
-  URL:=https://github.com/wahern/lua-cqueues.git
+  URL:=https://github.com/wahern/cqueues.git
   DEPENDS:=+lua +libopenssl
   PKGARCH:=all
 endef
