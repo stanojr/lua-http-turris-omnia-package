@@ -24,7 +24,7 @@ define Package/lua-cqueues
   CATEGORY:=Languages
   TITLE:=lua-cqueues
   URL:=https://github.com/wahern/lua-cqueues.git
-  DEPENDS:=+lua
+  DEPENDS:=+lua +libopenssl
   PKGARCH:=all
 endef
 
